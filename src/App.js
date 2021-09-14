@@ -1,23 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
+import Fetching from './component/Fetching';
+import {Switch,Route} from 'react-router-dom';
+import DisplayData from './component/DisplayData';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <Switch>
+      <Route exact path="/" component={Fetching}/>
+      <Route path="/display" component={DisplayData}/>
+    </Switch>
     </div>
   );
 }
