@@ -4,12 +4,17 @@ import DisplayData from './DisplayData';
 
 const Fetching = () => {
     const [input, setInput] =useState([]);
-    const temp =[...input];
-    const changeHandler =()=>{
-       temp.filter((prevalue,index)=>{
-                
-       })
-    }
+  
+    // Searching
+    // const onChangeHandler = (event) => {
+    //     event.preventDefault();
+    //     let value = event.target.value.toLowerCase();
+    //     let result = [];
+    //     result = data.filter((datas) => {  
+    //       return datas.firstName.search(value) != -1;
+    //     });
+    //     setData(result);
+    //   };
 
     useEffect(() => {
         
@@ -21,7 +26,7 @@ const Fetching = () => {
     console.log(input);
     return (
         <div>
-            <input placeholder="Search here" onChange={changeHandler}/> 
+            <input placeholder="Search here" onChange={onChangeHandler}/> 
         {
             input.map((value,index)=>{
                 return <ul key={index}>
